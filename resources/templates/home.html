@@ -1,0 +1,36 @@
+{% extends "templates/base.html" %}
+{% block content %}
+    <h1>Search Snippetz</h1>
+<form action="/search">
+    <input type="text" name="search-text"></input>
+<button type="submit">Search</button>
+</form>
+
+
+<!--
+  <div class="jumbotron">
+    <p>Time to start building your site!</p>
+    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
+  </div>
+<a class="btn btn-primary btn-lg" href="#" id="search-button">Search</a>
+
+  <div class="row-fluid">
+    <div class="span8">
+    {{content|safe}}
+    </div>
+  </div>
+-->
+{% endblock %}
+
+
+{% block page-scripts %}
+<script type="text/javascript">
+    /*
+    $(document).ready(function() {
+        $("#search-button").click(function(event) {
+            $.get("/search",{"search-text" : $("#search-box").val()})
+        });
+    });
+    */
+</script>
+{% endblock %}

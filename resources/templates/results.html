@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %}
+{% block content %}
+    <h1>Search Snippetz</h1>
+<form action="/search">
+    <input id="search-box" autofocus=true type="text" name="search-text" value="{{search-text}}"></input>
+<!--<button type="submit">Search</button>-->
+<button id="create-new-file" type="button">Create new file</button>
+</form>
+
+{% for result in results %}
+<a class="openable" href="/open?filename={{result.file}}">{{result.file}}</a>
+  <pre>{{ result.content }}</pre>
+{% endfor %}
+{% endblock %}
+
+{% block page-scripts %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".openable").click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $.get($(this).attr('href'));
+        });
+        $('#create-new-file').click(function(event) {
+            $.get('/create-new',{filename:$("#search-box").val()});
+        });
+    });
+</script>
+{% endblock %}

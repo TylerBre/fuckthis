@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Snippetz</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <!--
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{servlet-context}}/">myapp</a>
+        </div>
+        <div class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li class="{{home-selected}}"><a href="{{servlet-context}}/">Home</a></li>
+            <li class="{{about-selected}}"><a href="{{servlet-context}}/about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <!-- scripts and styles -->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+    {% style "/css/screen.css" %}
+      {% style "/css/bootstrap.min.css" %}
+      {% script "/js/jquery-1.11.1.min.js" %}
+
+      {% script "/js/bootstrap.min.js" %}
+      {% script "/js/moment.min.js" %}
+      {% script "/js/underscore-min.js" %}
+      {% script "/js/handlebars.min.js" %}
+
+
+    <script type="text/javascript">
+      var context = "{{servlet-context}}";
+    </script>
+    {% block page-scripts %}
+    {% endblock %}
+  </body>
+</html>
+
