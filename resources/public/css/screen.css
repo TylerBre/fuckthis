@@ -1,6 +1,64 @@
 html,
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height: 100%;
-    padding-top: 40px;
+	font-family: 'Unica One', cursive;
+
+}
+
+
+.dark-primary-color    { background: #455A64; }
+.default-primary-color { background: #607D8B; }
+.light-primary-color   { background: #CFD8DC; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FFC107; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+.nav_bar{
+    background-color: #455A64;
+    width: 100vw;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+pre{
+    white-space: pre-wrap;
+    margin-top: 10px !important;
+    padding: 10px 10px 10px 10px !important;
+    margin-left: 15px !important;
+    border-left: 3px solid #607D8B;
+}
+
+#pre-results > a{
+   font-family: 'Vollkorn', serif; 
+   padding-bottom: 5px;
+   font-size: 1.25em;
+}
+
+#search-box{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #FFC107;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+.primary_button{ 
+    background-color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    height: 50px;
+    width: 100%;
+    color: #212121;
+    font-size: .9em;
+    transition: all .5s ease;
+}
+
+.primary_button:hover{
+    background-color: #FFC107;
+    cursor: pointer;
+    color: #FFFFFF;
 }

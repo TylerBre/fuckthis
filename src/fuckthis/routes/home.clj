@@ -12,7 +12,7 @@
   (layout/render
    "home.html" {:content (util/md->html "/md/docs.md")}))
 
-(def editor "mvim")
+(def editor (str "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"))
 
 (defn about-page []
   (layout/render "about.html"))
