@@ -4,6 +4,10 @@ body {
 
 }
 
+input{
+    font-family: 'Vollkorn', serif; 
+}
+
 
 .dark-primary-color    { background: #455A64; }
 .default-primary-color { background: #607D8B; }
@@ -25,9 +29,14 @@ body {
 pre{
     white-space: pre-wrap;
     margin-top: 10px !important;
-    padding: 10px 10px 10px 10px !important;
+    margin-bottom: 25px !important;
+    padding: 10px 10px 10px 20px !important;
     margin-left: 15px !important;
     border-left: 3px solid #607D8B;
+}
+
+#pre-results{
+    margin-left: 10px;
 }
 
 #pre-results > a{
@@ -48,12 +57,13 @@ pre{
 
 .primary_button{ 
     background-color: #FFFFFF;
-    font-weight: bold;
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
     border: none;
     height: 50px;
     width: 100%;
-    color: #212121;
-    font-size: .9em;
+    color: #455A64;
+    font-size: 1.2em;
     transition: all .5s ease;
 }
 
@@ -61,4 +71,26 @@ pre{
     background-color: #FFC107;
     cursor: pointer;
     color: #FFFFFF;
+}
+
+
+
+::-webkit-input-placeholder {
+   color: #FFFFFF;
+   font-family: 'Vollkorn', serif; 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFFFFF;  
+   font-family: 'Vollkorn', serif; 
+}
+
+::-moz-pla#FFFFFFolder {  /* Firefox 19+ */
+   color: #FFFFFF;  
+   font-family: 'Vollkorn', serif; 
+}
+
+:-ms-input-placeholder {  
+   color: #FFFFFF;  
+   font-family: 'Vollkorn', serif; 
 }
