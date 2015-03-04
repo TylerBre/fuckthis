@@ -1,3 +1,4 @@
+; this whole file is a bucket of wrongness. should be split up into multiple files.
 (ns fuckthis.routes.home
   (:require [compojure.core :refer :all]
             [fuckthis.layout :as layout]
@@ -75,6 +76,7 @@
   (if (= search-text "") (layout/render "results.html" {})
   (layout/render "results.html" {:search-text search-text :results (clucy/search index search-text 10)})))
 
+; this is being done completely wrong.
 (defroutes home-routes
   (GET "/" [] (search ""))
   (GET "/search" [search-text] (search search-text))
