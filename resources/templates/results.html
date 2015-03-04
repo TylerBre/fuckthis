@@ -1,18 +1,15 @@
 {% extends "templates/base.html" %}
 {% block content %}
-    <h1>Search Snippetz</h1>
-<form action="/search">
-    <input id="search-box" autofocus=true type="text" name="search-text" value="{{search-text}}"></input>
-<!--<button type="submit">Search</button>-->
-<button id="create-new-file" type="button">Create new file</button>
-</form>
 
-{% for result in results %}
-<a class="openable" href="/open?filename={{result.file}}">{{result.file}}</a>
-  <pre>{{ result.content }}</pre>
-{% endfor %}
-{% endblock %}
-
+<div class="row">
+    <div class="large-12 columns" id="pre-results">
+        {% for result in results %}
+            <a class="openable file-title" href="/open?filename={{result.file}}">{{result.file}}</a>
+            <pre>{{ result.content }}</pre>
+        {% endfor %}
+        {% endblock %}
+    </div>
+</div>
 {% block page-scripts %}
 <script type="text/javascript">
     $(document).ready(function() {

@@ -12,6 +12,7 @@
    "home.html" {:content (util/md->html "/md/docs.md")}))
 
 
+(def editor (str "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"))
 
 (str (hash "fasdfj"))
 
@@ -27,7 +28,7 @@
 
 
 (defn open-file [filename]
-  (sh "gvim" (str file-path filename))
+  (sh editor (str file-path filename))
   "")
 
 
@@ -38,7 +39,7 @@
                   (clojure.string/replace filename " " "-")
                   ".txt")]
     (sh "touch" file)
-    (sh "gvim" file)
+    (sh editor file)
     ""))
 
 
